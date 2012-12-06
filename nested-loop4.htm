@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script type="text/javascript">
+//F to C convertion put in HTML table:C = 5/9 (F-32)
+function convertIt(){
+var sout;
+sout="<table width='400' cellpadding='3' cellspacing='4' border='1'><th align='left'>Farenheit</ht><th align='left'>Celsius</th>";//sout start to build table
+for(var i=20; i<=100; i=i+5){// start converting with 20 F and add 5 for each row
+	var farenheit =i;//each iteration is equal to a Farenheit degree
+	var celsius= parseInt((5/9)* (farenheit-32));// each iteration is equal to the converted a Celsius degree
+	sout=sout+"<tr>";//openining tag for a row
+	
+	for(var j=1; j<=1;j++){
+		sout=sout+'<td>'+farenheit+'</td><td>'+celsius+'</td>';//insert two cells per row
+	}
+	
+	sout=sout+"</tr>";//closing tag for a row
+}
+	sout=sout+"</table>";
+	document.getElementById("content").innerHTML= sout;
+}
+</script>
+</head>
+
+<body onload="convertIt()">
+<div id="content"></div>
+</body>
+</html>
