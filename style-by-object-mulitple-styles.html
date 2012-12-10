@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+function styleThis(){
+var sectA=document.getElementById('boxA');
+var css={
+color:"red",
+left:"100px",
+top:"50px",
+position:"relative"
+};
+for(x in css){
+sectA.style[x]=css[x]
+document.getElementById('paraB').innerHTML = x+": " + css[x];
+}
+
+}
+</script>
+</head>
+<body onload="styleThis()">
+<div id="boxA">
+<p id="paraA">This is paragraph A</p>
+</div>
+<div id="boxB">
+<p id="paraB">This is paragraph B</p>
+</div>
+
+
+</body>
+</html>
