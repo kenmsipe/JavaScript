@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Regular Expressions (regExp)</h2>
+<p>A regular expression is an object that describes a pattern of characters.</p>
+
+<p>When you search in a text, you can use a pattern to describe what you are searching for.</p>
+
+<p>A simple pattern can be one single character.
+
+<p>A more complicated pattern can consist of more characters, and can be used for parsing, format checking, substitution and more.</p>
+
+Regular expressions are used to perform powerful pattern-matching and "search-and-replace" functions on text.</p>
+
+
+   <ul>
+<li>   pattern specifies the pattern of an expression</li>
+   <li> modifiers specify if a search should be global, case-sensitive, etc.</li>
+   
+   <h3>modifiers</h3>
+  <p> i 	Perform case-insensitive matching</p>
+<p>g 	Perform a global match (find all matches rather than stopping after the first match)</p>
+<p>m 	Perform multiline matching</p>
+
+<script>
+var str = "Visit W3Schools";
+var patt1 = /w3schools/i;//i-case-insensitive
+document.write(str.match(patt1));
+</script>
+
+</body>
+</html>
+

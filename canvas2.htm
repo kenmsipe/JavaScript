@@ -1,0 +1,51 @@
+<!DOCTYPE HTML >
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script>
+
+var ctx;
+
+var factorValue=1;
+function init(){
+ ctx = document.getElementById("canvas").getContext('2d');
+
+ ctx.save();
+
+ reDraw();
+ }
+ 
+ function reDraw(){
+ ctx.clearRect(0,0,400,200);//clear ctxvas
+ ctx.scale(factorValue,factorValue);
+ 
+ 
+ ctx.fillStyle ="#dddddd";
+ ctx.beginPath();
+ ctx.moveTo(30,100);
+ ctx.lineTo(40,100);
+ ctx.lineTo(40,200);
+ ctx.lineTo(140,200);
+ ctx.lineTo(40,100);
+;
+ ctx.closePath();
+ctx.fill();
+
+}
+ 
+
+ 
+ function changeScale(val){
+ factorValue= val/100;
+ reDraw();
+ 
+ }
+</script>
+</head>
+
+<body onload="init();">
+<canvas id="canvas" width="400" height="200"></canvas>
+<input id="slide" type="range" min="0" max="100" value="100"  onchange="changeScale(this.value)" / >
+</body>
+</html>

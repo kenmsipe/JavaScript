@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Untitled Document</title>
+<meta charset="utf-8" />
+<script>
+window.addEventListener("load", function(e){
+	//getElementByTagName() returns an []. So you have to specify an index like [0]
+	var h = []
+	h[0] = document.getElementsByTagName("p")[0].innerHTML;
+	
+	document.getElementsByTagName("span")[0].innerHTML = h[0];//h[0] is referencing array([0]). That's why var h = [] was created.
+	});
+</script>
+
+</head>
+
+<body>
+
+<p>one</p>
+<span></span>
+
+<body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+//By Ken Sipe
+function press(e){
+//reset colors to black
+var p = document.getElementsByTagName('p');//this is stored in an array
+for(var i=0;i < p.length;i++){
+p[i].style.color="black";//applying style change to one element at a time
+}
+if(e=="eventA"){
+document.getElementById('paraA').style.color="red";//reset makes everything black but this line changes only this element style to color red
+}
+else if(e=="eventB"){
+document.getElementById('paraB').style.color="blue";//reset makes everything black but this line changes only this element style to color blue
+}
+}
+</script>
+</head>
+<body>
+<p id="paraA">This is paragraph A</p>
+<p id="paraB">This is paragraph B</p>
+<button onclick="press('eventA')">Press Button A</button>
+<button onclick="press('eventB')">Press Button B</button>
+
+</body>
+</html>
