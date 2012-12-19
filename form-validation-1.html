@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en"> 
+	<head>
+		<script>
+		function formValidator(){
+		var feedBack = document.getElementById('message');
+		if(document.forms[0].myBox.checked){
+			feedBack.innerHTML="The box is checked!";
+		}
+		else{
+			feedBack.innerHTML="Not checked...";
+		}
+		
+		}
+		</script>
+	</head>
+ 
+	<body>
+ 
+<form>
+My Checkbox: <input type="checkbox" name="myBox" />
+<input type="button" value="Submit" onClick="formValidator();" />
+<p id="message"></p>
+</form>
+ </body>
+</html>

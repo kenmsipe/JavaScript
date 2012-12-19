@@ -2,17 +2,31 @@
 <html>
 <head>
 <script type="text/javascript">
+function formReset()
+{
+document.getElementById("one").reset();
+}
 function formChange(frm){
+if(frm.bees.value==""){
+alert("Enter something buddy!");
+}
+else if(!frm.bees.value==""){
+alert("You entered: "+frm.bees.value);
+}
+
+document.getElementById('message').innerHTML ="You typed: "+frm.bees.value;
+
+}
 
 
 </script>
 </head>
 <body>
 
-<form name="apple" >
+<form id="one" name="apple" >
 <input name="bees" type="text"  />
-<input name="submit" type="button" onchange="formChange(this.form)" />
+<input name="submit" type="button"  value="Submit" onclick="formChange(this.form)" /><input  type="button" value="Reset" onclick="formReset()" />
 </form>
-
+<p id="message"></p>
 </body>
 </html>
